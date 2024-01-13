@@ -9,6 +9,7 @@ export default class Preloader {
     this.loading = document.querySelector(".loading");
     this.startButton = document.querySelector(".start");
 
+    // Create % loaded counter
     this.assetStore.subscribe((state) => {
       this.numberOfLoadedAssets = Object.keys(state.loadedAssests).length;
       this.numberOfAssetsToLoad = state.assetsToLoad.length;
