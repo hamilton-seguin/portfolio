@@ -8,13 +8,12 @@ import { LogMesh } from '@/utils'
 
 const CanvasScene = () => (
   <Canvas>
-    <ambientLight intensity={0.5} />
+    <Lights />
     <mesh>
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color="hotpink" />
     </mesh>
-    <OrbitControls />
-    <Lights />
+    <OrbitControls enableDamping/>
     <LogMesh meshName={'floorTarget'} />
   </Canvas>
 )
