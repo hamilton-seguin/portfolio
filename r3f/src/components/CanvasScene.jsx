@@ -2,6 +2,10 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 
+import Lights from '@/components/Lights'
+
+import { LogMesh } from '@/utils'
+
 const CanvasScene = () => (
   <Canvas>
     <ambientLight intensity={0.5} />
@@ -10,6 +14,8 @@ const CanvasScene = () => (
       <meshStandardMaterial color="hotpink" />
     </mesh>
     <OrbitControls />
+    <Lights />
+    <LogMesh meshName={'floorTarget'} />
   </Canvas>
 )
 
