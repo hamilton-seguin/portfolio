@@ -1,17 +1,17 @@
 import { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
-export const Character = ({ avatarChosen = null }) => {
+export const CharacterWireframe = () => {
   return (
-    <mesh position={[0, 10, 0]} name="character">
+    <mesh position={[0, 10, 0]} name="CharacterWireframe">
       <boxGeometry args={[0.6, 2, 0.6]} />
       <meshStandardMaterial color={0x00ff00} wireframe visible={true} />
     </mesh>
   )
 }
 
-export function AnimatedCharacter() {
-  const { scene, animations } = useGLTF('/models/h-avatar.glb', '/draco-gltf/')
+export function Character({ avatarChosen = null }) {
+  const { scene, animations } = useGLTF(`/models/${avatarChosen}.glb`, '/draco-gltf/')
   const { actions } = useAnimations(animations, scene)
   const avatarRef = useRef()
 
