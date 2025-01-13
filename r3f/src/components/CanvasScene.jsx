@@ -9,12 +9,10 @@ import { LogMesh } from '@/utils'
 const CanvasScene = () => (
   <Canvas>
     <Lights />
-    <mesh>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color="hotpink" />
-    </mesh>
-    <OrbitControls enableDamping/>
-    <LogMesh meshName={'floorTarget'} />
+
+    <Character />
+    <AnimatedCharacter 
+      position={[0, 10, 0]}/>
   </Canvas>
 )
 
