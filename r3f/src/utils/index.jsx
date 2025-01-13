@@ -11,3 +11,13 @@ export const LogMesh = ({ meshName }) => {
 
   return null
 }
+
+export const LogScene = () => {
+  const { scene } = useThree()
+
+  useEffect(() => {
+    console.log('Logging Scene: ', scene)
+  }, [scene])
+
+  return null
+}
