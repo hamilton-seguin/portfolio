@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 
-export default function Lights() {
+export const Lights = () => {
   const directionalLight = useRef()
   const targetRef = useRef()
 
