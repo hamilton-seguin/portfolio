@@ -13,13 +13,17 @@ export const AssetLoader = () => {
   useEffect(() => {
     let timer
     if (loaded === total && total > 0) {
-      timer = window.setTimeout(
-        () => appStateStore.setState({ assetsReady: true }),
-        1200
-      )
+      document.getElementById('loading').classList.add('opacity-0')
+      timer = window.setTimeout(() => {
+        appStateStore.setState({ assetsReady: true })
+      }, 1500)
     }
     return () => clearTimeout(timer)
   }, [loaded, total])
 
-  return <p>Loading Experience... {Math.floor(progress)}%</p>
+  return (
+    <p id="loading" className="transition-opacity duration-1000 delay-700">
+      Loading Experience... {Math.floor(progress)}%
+    </p>
+  )
 }

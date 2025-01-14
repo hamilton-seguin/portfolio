@@ -21,15 +21,17 @@ export const Preloader = () => {
         {!assetsReady && <AssetLoader />}
 
         {!characterSelected && assetsReady && (
-          <div className="character-select">
+          <div className="flex gap-8">
             <button
               type="button"
+              className='hover:text-[#9effe7]'
               onClick={() => handleCharacterSelect('h-avatar')}
             >
               START as 👨‍🦱
             </button>
             <button
               type="button"
+              className='hover:text-[#9effe7]'
               onClick={() => handleCharacterSelect('m-avatar')}
             >
               START as 👩
