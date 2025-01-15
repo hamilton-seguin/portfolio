@@ -25,8 +25,8 @@ export const Controller = ({ children }) => {
         // camInitDis={-7}
         // camMaxDism={-20}
         // camMinDis={3}
-        camInitDir={{ x: 0.32, y: 3.75 }}
-        camTargetPos={{ x: 0, y: 2.6, z: -7 }}
+        camInitDir={{ x: 0.38, y: 3.75 }}
+        camTargetPos={{ x: 0, y: 5, z: -10 }}
 
         sprintMult={1.4}
         jumpVel={3}
