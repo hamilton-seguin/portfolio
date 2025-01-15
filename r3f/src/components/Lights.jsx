@@ -1,43 +1,40 @@
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
+import { useThree } from '@react-three/fiber'
 
 export const Lights = () => {
-  const directionalLight = useRef()
-  const targetRef = useRef()
+  const directionalLightRef = useRef(null)
+  const { scene } = useThree()
 
+  useEffect(() => {
+    const floorObject = scene.getObjectByName('floor')
+    if (floorObject && directionalLightRef.current) {
+      directionalLightRef.current.target = floorObject
+    }
+  }, [scene])
   return (
     <>
-      <mesh
-        ref={targetRef}
-        position={[1.78, -2.1, 0]}
-        name="floorTarget"
-        visible={false}
-      />
-
-      <ambientLight color={0xffffff} intensity={0.3} />
+      <ambientLight color={'white'} intensity={0.22} />
       <directionalLight
-        ref={directionalLight}
+        ref={directionalLightRef}
         position={[34, 50, -29]}
-        color={0xe37730}
-        intensity={0.5}
+        color={0xe39230}
+        intensity={0.28}
         castShadow
-        shadow-camera-top={30}
-        shadow-camera-right={40}
-        shadow-camera-bottom={-30}
-        shadow-camera-left={-40}
-        shadow-bias={-0.0003}
-        shadow-normalBias={-0.0891}
-        target={targetRef.current}
-      />
+        shadow-bias={-0.0001}
+        shadow-normalBias={-0.01}
+      >
+        <orthographicCamera attach="shadow-camera" args={[-40, 40, 30, -30]}/>
+      </directionalLight>
       <directionalLight
         position={[-19, 15, -38]}
         color={0x35359c}
         intensity={0.1}
-        castShadow
+        // castShadow
         shadow-camera-top={3}
         shadow-camera-right={3}
         shadow-camera-bottom={-3}
         shadow-camera-left={-3}
-      />
+        />
     </>
   )
 }
