@@ -18,7 +18,7 @@ export const Lights = () => {
         ref={directionalLightRef}
         position={[34, 50, -29]}
         color={0xd1ad69}
-        intensity={0.28}
+        intensity={0.3}
         castShadow
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
