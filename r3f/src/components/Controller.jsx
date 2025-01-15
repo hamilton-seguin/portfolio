@@ -14,7 +14,7 @@ export const Controller = ({ children }) => {
 
   return (
     <KeyboardControls map={keyboardMap}>
-      <CharacterController maxVelLimit={5}>{children}</CharacterController>
+      <CharacterController maxVelLimit={5} position={[7.8, 4, 10]} >{children}</CharacterController>
     </KeyboardControls>
   )
 }
