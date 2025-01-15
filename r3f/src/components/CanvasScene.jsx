@@ -23,7 +23,11 @@ export default function CanvasScene() {
           toneMapping: 1,
           toneMappingExposure: 5,
         }}
-        onPointerDown={(e) => e.target.requestPointerLock()}
+        onPointerDown={(e) => {
+          if (e.pointerType === 'mouse') {
+            e.target.requestPointerLock()
+          }
+        }}
         fallback={<div>Sorry WebGL is not supported by your device!</div>}
       >
         <color attach="background" args={[bgColor.r, bgColor.g, bgColor.b]} />
