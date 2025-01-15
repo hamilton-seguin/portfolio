@@ -16,7 +16,7 @@ export const Preloader = () => {
   if (characterSelected) return null
 
   return (
-    <div className="fixed bg-black w-full h-full text-white z-10">
+    <div className="fixed bg-[#050a14] w-full h-full text-white z-10">
       <div className="flex justify-center items-center h-full text-white transition-opacity duration-1000">
         {!assetsReady && <AssetLoader />}
 
