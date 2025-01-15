@@ -5,6 +5,8 @@ import { appStateStore } from '@/utils/store'
 
 export const Controller = ({ children }) => {
   const characterSelected = appStateStore((state) => state.characterSelected)
+  console.log('characterSelected:', characterSelected);
+  
 
   const keyboardMap = [
     { name: 'forward', keys: ['ArrowUp', 'KeyW'] },
@@ -23,7 +25,8 @@ export const Controller = ({ children }) => {
     jumpIdle: 'Jumping',
     jumpLand: 'Jumping',
     fall: 'Jumping',
-    action1: 'Dancing|Idle-Hand',
+    action1: characterSelected === 'h-avatar' ? 'Dancing' : 'Idle-Hand',
+    // action1: 'Dancing|Idle-Hand',
   }
 
   const characterURL = `/models/${characterSelected}.glb`
