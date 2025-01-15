@@ -26,7 +26,6 @@ export const Controller = ({ children }) => {
     jumpLand: 'Jumping',
     fall: 'Jumping',
     action1: characterSelected === 'h-avatar' ? 'Dancing' : 'Idle-Hand',
-    // action1: 'Dancing|Idle-Hand',
   }
 
   const characterURL = `/models/${characterSelected}.glb`
