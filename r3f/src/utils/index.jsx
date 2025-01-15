@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useThree } from '@react-three/fiber'
+import { Color } from 'three'
 
 export const LogMesh = ({ meshName }) => {
   const { scene } = useThree()
@@ -21,3 +22,5 @@ export const LogScene = () => {
 
   return null
 }
+
+export const bgColor = new Color(0x050a14)
