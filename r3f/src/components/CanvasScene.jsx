@@ -9,7 +9,7 @@ import { Environment } from '@/components/Environment'
 import { Controller } from '@/components/Controller'
 
 import { appStateStore } from '@/utils/store'
-import { LogMesh, LogScene } from '@/utils'
+import { LogMesh, LogScene, bgColor } from '@/utils'
 
 export default function CanvasScene() {
   const characterSelected = appStateStore((state) => state.characterSelected)
@@ -23,12 +23,10 @@ export default function CanvasScene() {
           toneMapping: 1,
           toneMappingExposure: 5,
         }}
-        onCreated={({ gl }) => {
-          console.log('gl', gl)
-        }}
         onPointerDown={(e) => e.target.requestPointerLock()}
         fallback={<div>Sorry WebGL is not supported by your device!</div>}
       >
+        <color attach="background" args={[bgColor.r, bgColor.g, bgColor.b]} />
         <Lights />
 
         <Physics timeStep="vary">
