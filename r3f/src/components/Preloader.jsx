@@ -1,4 +1,6 @@
 'use client'
+import { useGLTF } from '@react-three/drei'
+
 import { AssetLoader } from '@/components/AssetLoader'
 
 import { appStateStore } from '@/utils/store'
@@ -7,10 +9,16 @@ export const Preloader = () => {
   const assetsReady = appStateStore((state) => state.assetsReady)
   const characterSelected = appStateStore((state) => state.characterSelected)
 
+  const oppositeCharacter = ['h-avatar', 'm-avatar'].filter(
+    (c) => c !== characterSelected
+  )[0]
+  const url = `/models/${oppositeCharacter}.glb`
+
   const handleCharacterSelect = (characterId) => {
     appStateStore.setState({
       characterSelected: characterId,
     })
+    useGLTF.clear(url)
   }
 
   if (characterSelected) return null
@@ -24,14 +32,14 @@ export const Preloader = () => {
           <div className="flex gap-8">
             <button
               type="button"
-              className='hover:text-[#9effe7]'
+              className="hover:text-[#9effe7]"
               onClick={() => handleCharacterSelect('h-avatar')}
             >
               START as 👨‍🦱
             </button>
             <button
               type="button"
-              className='hover:text-[#9effe7]'
+              className="hover:text-[#9effe7]"
               onClick={() => handleCharacterSelect('m-avatar')}
             >
               START as 👩
