@@ -18,7 +18,7 @@ export default function CanvasScene() {
     <div className="w-screen h-screen">
       <Canvas
         shadows
-        camera={{ fov: 35 }}
+        camera={{ fov: 35, position: [15, 6, 22] }}
         gl={{
           toneMapping: 1,
           toneMappingExposure: 5,
@@ -28,7 +28,7 @@ export default function CanvasScene() {
             e.target.requestPointerLock()
           }
         }}
-        fallback={<div>Sorry WebGL is not supported by your device!</div>}
+        fallback={<div>Sorry, WebGL is not supported by your device!</div>}
       >
         <color attach="background" args={[bgColor.r, bgColor.g, bgColor.b]} />
         <Lights />
@@ -43,8 +43,8 @@ export default function CanvasScene() {
         </Physics>
 
         <OrbitControls enableDamping />
-        <LogScene />
-        {/* <LogMesh meshName={'floorTarget'} /> */}
+        {/* <LogScene /> */}
+        <LogMesh meshName={'tiles014'} />
       </Canvas>
     </div>
   )
