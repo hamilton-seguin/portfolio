@@ -1,12 +1,6 @@
 import { create } from 'zustand'
 
-// export const sizesStore = create(() => ({
-//   width: window.innerWidth,
-//   height: window.innerHeight,
-//   pixelRatio: Math.min(window.devicePixelRatio, 2),
-// }))
-
-export const appStateStore = create((set) => ({
+export const appStateStore = create(() => ({
   physicsReady: false,
   assetsReady: false,
   characterReady: false,
@@ -21,4 +15,9 @@ export const inputStore = create(() => ({
   right: false,
   extra: false,
   jump: false,
+}))
+
+export const modalStore = create(() => ({
+  modalOpen: true,
+  modalName: null,
 }))
