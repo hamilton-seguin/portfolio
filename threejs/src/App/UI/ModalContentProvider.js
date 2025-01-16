@@ -39,7 +39,7 @@ export default class ModalContentProvider {
       tutorial: {
         title: 'Tutorial',
         description:
-          'Z / ↑ : Forward <br/> A / ← : Left <br/> S / ↓ : Backward <br/> D / → : Right <br/> Space : Jump <br/> F : Special',
+          'Z / ↑ : Forward <br/> A / ← : Left <br/> S / ↓ : Backward <br/> E / → : Right <br/> Space : Jump <br/> F : Special',
       },
     }
   }
