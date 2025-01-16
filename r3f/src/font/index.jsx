@@ -11,11 +11,13 @@ export const andaleMono = localFont({
   ],
   variable: '--font-andale',
   fallback: ['monospace'],
+  preload: true,
 })
 
 export const amatic = Amatic_SC({
   subsets: ['latin'],
   weight: ['400'],
   fallback: ['cursive'],
+  variable: '--font-amatic',
   preload: true,
 })
