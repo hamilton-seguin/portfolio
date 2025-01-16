@@ -14,6 +14,7 @@ export default function Home() {
         <title>Hamilton Seguin Portfolio</title>
         <meta name="description" content="R3F Nextjs Portfolio" />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#050a14" />
       </Head>
 
       <Preloader />
