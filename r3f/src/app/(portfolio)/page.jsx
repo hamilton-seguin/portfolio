@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 
+import { Modal } from '@/components/Modal'
 import { Preloader } from '@/components/Preloader'
 
 const CanvasScene = dynamic(() => import('@/components/CanvasScene'), {
@@ -18,6 +19,7 @@ export default function Home() {
       </Head>
 
       <Preloader />
+      <Modal />
       <CanvasScene />
     </>
   )
