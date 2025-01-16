@@ -19,3 +19,14 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+a {
+  color: white;
+  text-underline-offset: 3px;
+}
+a:visited {
+  color: #ab7af5;
+}
+a:hover {
+  color: #8f47fc;
+}
