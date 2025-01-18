@@ -43,8 +43,8 @@ export default function CanvasScene() {
         </Physics>
 
         <OrbitControls enableDamping />
-        {/* <LogScene /> */}
-        <LogMesh meshName={'tiles014'} />
+        {/* <LogScene />
+        <LogMesh meshName={'avatarController'} /> */}
       </Canvas>
     </div>
   )

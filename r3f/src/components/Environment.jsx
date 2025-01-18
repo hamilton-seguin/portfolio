@@ -2,6 +2,8 @@ import { useGLTF } from '@react-three/drei'
 import { RigidBody } from '@react-three/rapier'
 import { useMemo } from 'react'
 
+import { modalStore } from '@/utils/store'
+
 export const Environment = () => {
   const { scene: environment } = useGLTF('/models/environment.glb')
 

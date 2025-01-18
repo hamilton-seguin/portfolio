@@ -5,8 +5,6 @@ import { appStateStore } from '@/utils/store'
 
 export const Controller = ({ children }) => {
   const characterSelected = appStateStore((state) => state.characterSelected)
-  console.log('characterSelected:', characterSelected);
-  
 
   const keyboardMap = [
     { name: 'forward', keys: ['ArrowUp', 'KeyW'] },
@@ -33,6 +31,7 @@ export const Controller = ({ children }) => {
   return (
     <KeyboardControls map={keyboardMap}>
       <CharacterController
+        name="avatarController"
         maxVelLimit={5}
         position={[8.3, 4, 10.5]}
         capsuleHalfHeight={0.45}
