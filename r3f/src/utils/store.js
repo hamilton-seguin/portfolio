@@ -18,6 +18,6 @@ export const inputStore = create(() => ({
 }))
 
 export const modalStore = create(() => ({
-  modalOpen: true,
+  modalOpen: false,
   modalName: null,
 }))
