@@ -1,3 +1,5 @@
+import url from '@/image/you-ded.webp'
+
 const modalContents = {
   aboutMe: {
     title: 'About me',
@@ -35,7 +37,7 @@ const modalContents = {
   projects: {
     title: 'Projects',
     description: (
-      <p>
+      <>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -43,7 +45,7 @@ const modalContents = {
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
-      </p>
+      </>
     ),
   },
   contactMe: {
@@ -69,11 +71,7 @@ const modalContents = {
         You can also follow my work or reach out via these platforms:
         <br />
         <br />•{' '}
-        <a
-          className="underline-offset-4 visited:text-[#ab7af5] hover:text-[#8f47fc]"
-          href="https://github.com/hamilton-seguin"
-          target="_blank"
-        >
+        <a href="https://github.com/hamilton-seguin" target="_blank">
           GitHub
         </a>
         <br />
@@ -84,11 +82,16 @@ const modalContents = {
   tutorial: {
     title: 'Tutorial',
     description: (
-      <p>
+      <>
         Z / ↑ : Forward <br /> A / ← : Left <br /> S / ↓ : Backward <br /> E / →
         : Right <br /> Space : Jump <br /> F : Special
-      </p>
+      </>
     ),
+  },
+  respawn: {
+    title: 'Game Over',
+    img: url,
+    description: null,
   },
 }
 
