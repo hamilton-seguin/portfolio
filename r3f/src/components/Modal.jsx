@@ -6,11 +6,16 @@ import { fira } from '@/font'
 
 export const Modal = () => {
   const modalOpen = modalStore((state) => state.modalOpen)
-  const modalName = 'tutorial'
-  // modalStore((state) => state.modalName)
+  const modalName = modalStore((state) => state.modalName)
 
+  if (!modalOpen) return null
+  
   const handleClick = () => {
-    modalStore.setState({ modalOpen: false, modalName: null })
+    if (modalName === 'respawn') {
+      window.location.reload()
+    } else {
+      modalStore.setState({ modalOpen: false, modalName: null })
+    }
   }
 
   return (
@@ -30,9 +35,9 @@ export const Modal = () => {
         <button
           type="button"
           className="text-xl font-bold"
-          onClick={handleClick}
+          onClick={() => handleClick()}
         >
-          CLOSE
+          {modalName === 'respawn' ? 'RESTART' : 'CLOSE'}
         </button>
       </div>
     </div>
