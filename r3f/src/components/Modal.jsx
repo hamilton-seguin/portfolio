@@ -9,7 +9,7 @@ export const Modal = () => {
   const modalName = modalStore((state) => state.modalName)
 
   if (!modalOpen) return null
-  
+
   const handleClick = () => {
     if (modalName === 'respawn') {
       window.location.reload()
@@ -20,21 +20,21 @@ export const Modal = () => {
 
   return (
     <div
-      className={`fixed z-20 left-0 top-0 w-full bg-transparent ${
+      className={`fixed z-20 flex justify-center items-center h-full w-full bg-transparent ${
         modalOpen
           ? 'h-svh overflow-auto opacity-100'
           : 'h-0 overflow-hidden opacity-0'
       }`}
     >
       <div
-        className={`relative w-11/12 mt-4 flex flex-col justify-center items-center  ${fira.className}`}
+        className={`relative  flex flex-col justify-center items-center gap-4 ${fira.className}`}
       >
-        <div className="backdrop-blur-xl h-auto min-h-48 p-5 rounded-2xl shadow-transparent/20">
+        <div className="backdrop-blur-xl min-h-48 max-h-[90vh] p-5 rounded-2xl shadow-transparent/20">
           <ModalContentProvider portalName={modalName} />
         </div>
         <button
           type="button"
-          className="text-xl font-bold"
+          className="text-xl font-bold backdrop-blur-xl h-auto py-2 px-6 rounded-2xl shadow-transparent/20 hover:text-[#9effe7] hover:bg-[#ffffff4d] transition-colors"
           onClick={() => handleClick()}
         >
           {modalName === 'respawn' ? 'RESTART' : 'CLOSE'}
