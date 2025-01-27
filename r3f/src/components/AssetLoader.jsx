@@ -22,7 +22,7 @@ export const AssetLoader = () => {
   }, [loaded, total])
 
   return (
-    <p id="loading" className="transition-opacity duration-1000 delay-700">
+    <p id="loading" className="transition-opacity duration-1000 delay-700 text-5xl lg:text-6xl">
       Loading Experience... {Math.floor(progress)}%
     </p>
   )
