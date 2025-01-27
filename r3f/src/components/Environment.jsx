@@ -1,11 +1,18 @@
+import { useMemo } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { RigidBody } from '@react-three/rapier'
-import { useMemo } from 'react'
 
-import { modalStore } from '@/utils/store'
+import { ModalController } from '@/components/ModalController'
 
 export const Environment = () => {
   const { scene: environment } = useGLTF('/models/environment.glb')
+
+  const portals = useMemo(() => {
+    const portalNames = ['portalBot', 'portalMid', 'portalTop', 'tiles014']
+    return portalNames.map((name) => environment.getObjectByName(name))
+  }, [environment])
+
+  const modalNames = ['aboutMe', 'projects', 'contactMe', 'tutorial']
 
   const processedEnvironment = useMemo(() => {
     const physicalObjects = [
@@ -67,6 +74,11 @@ export const Environment = () => {
           <primitive key={index} object={object} />
         )
       )}
+      {portals.map((portalMesh, index) => {
+        return (
+          <ModalController key={index} mesh={portalMesh} modalName={modalNames[index]} />
+        )
+      })}
     </>
   )
 }
