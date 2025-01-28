@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/jablonkowy-las/:path*",
+      "destination": "https://jablonkowylas-hkv4eqzyy-hamilton-seguins-projects.vercel.app/:path*"
+    }
+  ]
+}
