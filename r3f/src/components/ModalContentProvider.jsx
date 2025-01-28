@@ -8,7 +8,7 @@ const CustomLink = ({ url, children }) => {
   if (!url) return <>{children}</>
   if (url.includes('https')) {
     return (
-      <a href={url} target="_blank" noreferrer noopener className="underline">
+      <a href={url} target="_blank" noreferrer="true" noopener="true" className="underline">
         {children}
       </a>
     )
@@ -39,7 +39,7 @@ export const ModalContentProvider = ({ portalName }) => {
   }
 
   return portalName !== 'projects' ? (
-    <div className="flex flex-col gap-8 items-center text-center min-w-[60vw] max-w-[80vw] sm:max-w-[60vw] p-4 max-h-[80vh] overflow-y-auto">
+    <div className="flex flex-col gap-8 items-center text-center min-w-fit max-w-[80vw] sm:max-w-[60vw] p-4 max-h-[80vh] overflow-y-auto">
       <h1 className="font-bold text-3xl">{modal.title}</h1>
       {modal.descriptionHeader && (
         <h2 className="font-medium text-xl leading-snug">
@@ -78,8 +78,8 @@ export const ModalContentProvider = ({ portalName }) => {
             </h3>
           </div>
           <ul className="flex gap-2 flex-wrap justify-center">
-            {projectsData[currentIndex].stacks.map((stack) => (
-              <li key={stack} className="text-sm">
+            {projectsData[currentIndex].stacks.map((stack, i) => (
+              <li key={i} className="text-sm">
                 {stack}
               </li>
             ))}

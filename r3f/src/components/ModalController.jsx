@@ -35,8 +35,6 @@ export const ModalController = ({ mesh, modalName }) => {
     if (mesh.name.includes('portal')) {
       mesh.material = farMaterial
     }
-    console.log('ModalController mesh:', mesh.material);
-    
   }, [mesh])
 
   useFrame(() => {
