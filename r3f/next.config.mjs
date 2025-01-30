@@ -4,7 +4,8 @@ const nextConfig = {
     return [
       {
         source: '/jablonkowy-las/:path*',
-        destination: 'https://jablonkowylas.vercel.app/:path*',
+        destination:
+          'https://www.jablonkowylas.website/:path*',
       },
     ]
   },
