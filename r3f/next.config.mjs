@@ -5,7 +5,7 @@ const nextConfig = {
       {
         source: '/jablonkowy-las/:path*',
         destination:
-          'https://www.jablonkowylas.website/:path*',
+          'http://www.jablonkowylas.website/:path*',
       },
     ]
   },
