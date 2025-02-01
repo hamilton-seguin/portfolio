@@ -7,6 +7,11 @@ const nextConfig = {
         destination:
           'https://www.jablonkowylas.website/:path*',
       },
+      {
+        source: '/nasa-api/:path*',
+        destination:
+          'https://nasa-api-xi-five.vercel.app/:path*',
+      },
     ]
   },
 }
