@@ -10,11 +10,6 @@ const nextConfig = {
         source: '/nasa-api/:path*',
         destination: 'https://nasa-api-xi-five.vercel.app/:path*',
       },
-      {
-        source: '/static/:path*',
-        destination:
-          'https://nasa-api-xi-five.vercel.app/nasa-api/static/:path*',
-      },
     ]
   },
 }
