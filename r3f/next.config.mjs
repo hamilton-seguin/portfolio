@@ -4,13 +4,16 @@ const nextConfig = {
     return [
       {
         source: '/jablonkowy-las/:path*',
-        destination:
-          'https://www.jablonkowylas.website/:path*',
+        destination: 'https://www.jablonkowylas.website/:path*',
       },
       {
         source: '/nasa-api/:path*',
+        destination: 'https://nasa-api-xi-five.vercel.app/:path*',
+      },
+      {
+        source: '/static/:path*',
         destination:
-          'https://nasa-api-xi-five.vercel.app/:path*',
+          'https://nasa-api-xi-five.vercel.app/nasa-api/static/:path*',
       },
     ]
   },
