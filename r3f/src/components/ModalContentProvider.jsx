@@ -20,12 +20,9 @@ const CustomLink = ({ url, children }) => {
     )
   }
   return (
-    <a
-    href={url}
-    className="underline"
-  >
-    {children}
-  </a>
+    <Link href={url} className="underline" prefetch={false}>
+      {children}
+    </Link>
   )
 }
 

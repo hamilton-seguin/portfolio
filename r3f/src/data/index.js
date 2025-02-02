@@ -273,7 +273,7 @@ export const projectsData = [
       '•	Fun fact: I also took the pictures of the resort for the website',
     ],
     professional: true,
-    url: '/jablonkowy-las',
+    url: 'https://jablonkowylas.website/',
   },
   {
     title: 'Voyage in Style',
