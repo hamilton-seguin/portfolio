@@ -6,10 +6,6 @@ const nextConfig = {
         source: '/jablonkowy-las/:path*',
         destination: 'https://www.jablonkowylas.website/:path*',
       },
-      {
-        source: '/nasa-api/:path*',
-        destination: 'https://nasa-api-xi-five.vercel.app/:path*',
-      },
     ]
   },
 }

@@ -229,7 +229,7 @@ export const projectsData = [
       '•	Hands-On Learning: This project deepened my understanding of backend development, database management, and working with real-world datasets.',
     ],
     professional: false,
-    url: '/nasa-api',
+    url: 'https://nasa-api-xi-five.vercel.app/',
   },
   {
     title: 'Jablonkowy Las',
