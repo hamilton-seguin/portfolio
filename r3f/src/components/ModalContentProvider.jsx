@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const CustomLink = ({ url, children }) => {
   if (!url) return <>{children}</>
-  if (url.includes('https')) {
+  // if (url.includes('https')) {
     return (
       <a
         href={url}
@@ -18,12 +18,12 @@ const CustomLink = ({ url, children }) => {
         {children}
       </a>
     )
-  }
-  return (
-    <Link href={url} className="underline" prefetch={false}>
-      {children}
-    </Link>
-  )
+  // }
+  // return (
+  //   <Link href={url} className="underline" prefetch={false}>
+  //     {children}
+  //   </Link>
+  // )
 }
 
 export const ModalContentProvider = ({ portalName }) => {
