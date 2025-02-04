@@ -86,7 +86,7 @@ export const ModalContentProvider = ({ portalName }) => {
             </li>
           ))}
         </ul>
-        <div className="flex gap-4 justify-center items-center w-full mt-4 mb-8">
+        <div className="flex gap-4 justify-center items-center w-full mt-4 mb-8 max-h-96">
           <button
             onClick={handlePrev}
             className="bg-slate-500/20 text-white px-3 py-1 sm:py-2 rounded-full text-3xl sm:text-5xl shadow-transparent/20 hover:text-[#9effe7] hover:bg-[#ffffff4d] transition-colors"
@@ -99,7 +99,7 @@ export const ModalContentProvider = ({ portalName }) => {
             height={400}
             alt={projectsData[currentIndex].title}
             priority
-            className="max-w-full min-w-[60vw] sm:min-w-[30vw]"
+            className="max-w-full min-w-[60vw] sm:min-w-[30vw] h-auto max-h-96"
           />
 
           <button
