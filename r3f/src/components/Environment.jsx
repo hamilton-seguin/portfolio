@@ -8,8 +8,8 @@ export const Environment = () => {
   const { scene: environment } = useGLTF('/models/environment.glb')
 
   const modal = useMemo(() => {
-    const modalNames = ['portalBot', 'portalMid', 'portalTop', 'tiles014']
-    return modalNames.map((name) => environment.getObjectByName(name))
+    const modalMeshNames = ['portalBot', 'portalMid', 'portalTop', 'tiles014']
+    return modalMeshNames.map((name) => environment.getObjectByName(name))
   }, [environment])
 
   const modalNames = ['aboutMe', 'projects', 'contactMe', 'tutorial']
@@ -74,9 +74,9 @@ export const Environment = () => {
           <primitive key={index} object={object} />
         )
       )}
-      {modal.map((portalMesh, index) => {
+      {modal.map((modalMesh, index) => {
         return (
-          <ModalController key={index} mesh={portalMesh} modalName={modalNames[index]} />
+          <ModalController key={index} mesh={modalMesh} modalName={modalNames[index]} />
         )
       })}
     </>
