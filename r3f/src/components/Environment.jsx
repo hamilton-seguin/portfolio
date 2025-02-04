@@ -7,9 +7,9 @@ import { ModalController } from '@/components/ModalController'
 export const Environment = () => {
   const { scene: environment } = useGLTF('/models/environment.glb')
 
-  const portals = useMemo(() => {
-    const portalNames = ['portalBot', 'portalMid', 'portalTop', 'tiles014']
-    return portalNames.map((name) => environment.getObjectByName(name))
+  const modal = useMemo(() => {
+    const modalNames = ['portalBot', 'portalMid', 'portalTop', 'tiles014']
+    return modalNames.map((name) => environment.getObjectByName(name))
   }, [environment])
 
   const modalNames = ['aboutMe', 'projects', 'contactMe', 'tutorial']
@@ -74,7 +74,7 @@ export const Environment = () => {
           <primitive key={index} object={object} />
         )
       )}
-      {portals.map((portalMesh, index) => {
+      {modal.map((portalMesh, index) => {
         return (
           <ModalController key={index} mesh={portalMesh} modalName={modalNames[index]} />
         )
