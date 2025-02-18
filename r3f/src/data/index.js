@@ -65,7 +65,7 @@ const modalContents = {
         <br />
         <br />• Find me on:{' '}
         <a
-          href="https://www.linkedin.com/in/hamilton-seguin-6a5783270/?locale=en_US"
+          href="https://www.linkedin.com/in/hamilton-seguin"
           target="_blank"
         >
           LinkedIn
