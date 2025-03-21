@@ -4,6 +4,7 @@ import jablonkowyImg from '@/image/jablonkowylas.webp'
 import porfolioImg from '@/image/portfolio.webp'
 import visImg from '@/image/voyageinstyle.webp'
 import nasaImg from '@/image/nasa-api.webp'
+import notionCloneImg from '@/image/notion-clone.webp'
 
 const modalContents = {
   aboutMe: {
@@ -198,6 +199,62 @@ export const projectsData = [
     ],
     professional: false,
     url: '',
+  },
+
+  {
+    title: 'Notion Clone',
+    subtitle:
+      'Full-featured Note-taking App with Authentication and Dark Mode Support',
+    img: notionCloneImg,
+    stacks: [
+      'React',
+      '|',
+      'TypeScript',
+      '|',
+      'Vite',
+      '|',
+      'TailwindCSS',
+      '|',
+      'Supabase',
+      '|',
+      '@dnd-kit',
+      '|',
+      'Immer',
+    ],
+    description: (
+      <>
+        A comprehensive clone of Notion’s core functionality, featuring secure
+        user authentication and protected routes. Built with React and
+        TypeScript for robust type safety, the app leverages Vite for
+        lightning-fast development and builds, while TailwindCSS provides a
+        sleek, responsive design system with seamless light and dark mode
+        transitions.
+        <br />
+        <br />
+        The project implements advanced features including user authentication
+        via Supabase, private routes for authenticated content, drag-and-drop
+        functionality using @dnd-kit, image uploads with Supabase storage, and
+        efficient state management with Immer. The editor supports multiple
+        block types, including text and images, with a command palette interface
+        for block type switching.
+        <br />
+        <br />
+        Key technical achievements include implementing a secure authentication
+        flow, protected routing system, custom rich text editor, responsive
+        layout system with intelligent theme handling, and creating a seamless
+        file upload experience. The project demonstrates best practices in
+        modern web development, including strict TypeScript usage, modular
+        component architecture, and comprehensive error + testing handling.
+      </>
+    ),
+    achievements: [
+      '•	Security: Implemented robust authentication with Supabase and protected routes for authenticated users.',
+      '•	Architecture: Designed a modular, maintainable codebase with clear separation of concerns and TypeScript for type safety.',
+      "•	UX Design: Implemented an intuitive command palette, system-aware theme switching, and drag-and-drop interface matching Notion's functionality.",
+      '•	Technical Integration: Successfully integrated Supabase for authentication, data storage, and file management.',
+    ],
+    professional: false,
+    url: 'https://notion-clone-hamilton.netlify.app',
   },
   {
     title: 'Nasa API',
