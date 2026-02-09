@@ -5,14 +5,14 @@ import porfolioImg from '@/image/portfolio.webp'
 import visImg from '@/image/voyageinstyle.webp'
 import nasaImg from '@/image/nasa-api.webp'
 import notionCloneImg from '@/image/notion-clone.webp'
+import modjoImg from '@/image/modjo.webp'
 
 const modalContents = {
   aboutMe: {
     title: 'About me',
     descriptionHeader: (
       <>
-        👨‍💻 Senior Software Developer | 3+ Years Experience | Front-End
-        Development
+        👨‍💻 Software Engineer | 3 Years Experience | Front-End Development
         <br />
         ⚙️ Scalable & Modular Solutions | 🚀 Driving Seamless User Experiences
         <br />
@@ -21,36 +21,23 @@ const modalContents = {
     ),
     description: (
       <>
-        Hi, I’m Hamilton – a passionate software developer specializing in{' '}
-        <b>front-end</b> and <b>full-stack development</b>. With expertise in{' '}
-        <b>Next.js</b>, <b>TypeScript</b>, <b>Node.js</b>, <b>Tailwind CSS</b>,
-        and <b>Three.js</b>, I craft seamless, scalable solutions that bridge
-        creativity and functionality. ✨
+        Hi, I’m Hamilton – a software engineer focused on{' '}
+        <b>frontend development</b> and building thoughtful, high-impact product
+        experiences. I work mainly with <b>React</b>, <b>TypeScript</b>,{' '}
+        <b>Next.js</b>, and modern frontend tooling, with a strong interest in{' '}
+        <b>SaaS</b> and <b>AI-powered products</b>. ✨
         <br />
-        <br />I thrive on tackling challenges that push me to grow, always eager
-        to embrace opportunities to <b>learn</b>, <b>innovate</b>, and{' '}
-        <b>elevate</b> my craft.
+        <br />I enjoy working at the intersection of <b>product</b>, <b>UX</b>,
+        and <b>engineering</b> — turning complex problems into clear,
+        maintainable, and user-friendly interfaces.
         <br />
         <br />
-        Currently, I’m a <b>Senior Frontend Developer</b> at{' '}
-        <a href="https://niloom.ai" target="_blank">
-          Niloom
+        Most recently, I worked as a <b>Frontend Engineer</b> at{' '}
+        <a href="https://www.modjo.ai" target="_blank">
+          Modjo
         </a>
-        , where I lead projects that deliver impactful user experiences. 📈
-      </>
-    ),
-  },
-  projects: {
-    title: 'Projects',
-    description: (
-      <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        , contributing to business-critical features, design system evolution,
+        and AI-driven user experiences in a fast-growing SaaS environment. 🚀
       </>
     ),
   },
@@ -65,10 +52,7 @@ const modalContents = {
         say hi, feel free to reach out.
         <br />
         <br />• Find me on:{' '}
-        <a
-          href="https://www.linkedin.com/in/hamilton-seguin"
-          target="_blank"
-        >
+        <a href="https://www.linkedin.com/in/hamilton-seguin" target="_blank">
           LinkedIn
         </a>
         <br />• <a href="mailto:hamilton.seguin@gmail.com">Email me</a>
@@ -102,6 +86,54 @@ const modalContents = {
 }
 
 export const projectsData = [
+  {
+    title: 'Modjo',
+    subtitle: 'AI-powered Conversation Intelligence SaaS',
+    img: modjoImg,
+    stacks: [
+      'React',
+      '|',
+      'TypeScript',
+      '|',
+      'Next.js',
+      '|',
+      '@tanstack/react-query',
+      '|',
+      'Zustand',
+      '|',
+      'Playwright',
+      '|',
+      'Datadog',
+    ],
+    description: (
+      <>
+        Modjo is a B2B SaaS platform leveraging AI to analyze sales
+        conversations and surface actionable insights. As a Frontend Engineer, I
+        worked on business-critical features exposed directly from the Home
+        Page, with a strong focus on adoption, clarity, and product impact.
+        <br />
+        <br />I contributed to the redesign and implementation of the AI-powered
+        <i> Ask Anything </i> experience, collaborating closely with Product,
+        Design, Backend, and Data/ML teams to align UI decisions with business
+        strategy and data quality requirements.
+        <br />
+        <br />
+        Beyond feature development, I participated in structural frontend
+        improvements, design system evolution, and production-quality workflows,
+        operating in a highly demanding engineering environment with strong code
+        review standards and observability practices.
+      </>
+    ),
+    achievements: [
+      '• AI Feature Adoption: Contributed to the Home Page redesign highlighting Ask Anything, resulting in a +26% increase in feature adoption.',
+      '• Funnel Refactor: Co-architected a complex, URL-driven multi-step form, improving maintainability and reducing related support tickets by 85%.',
+      '• Design System & Forms: Led migrations from Formik to React Hook Form and Yup to Zod, improving performance, robustness, and developer experience through composable DS components.',
+      '• Quality & Testing: Implemented business-critical E2E tests with Playwright and explored automation strategies to improve E2E reliability and maintenance.',
+      '• Production Ownership: Participated in support rotations, analyzing Datadog errors, prioritizing bugs, and improving frontend reliability in production.',
+    ],
+    professional: true,
+    url: 'https://www.modjo.ai/',
+  },
   {
     title: 'Niloom AI',
     subtitle: 'AR/VR Content Creation Platform with Generative AI',
