@@ -83,6 +83,10 @@ const modalContents = {
     img: gameoverImg,
     description: null,
   },
+  projects: {
+    title: 'Projects',
+    description: null,
+  },
 }
 
 export const projectsData = [
@@ -97,7 +101,7 @@ export const projectsData = [
       '|',
       'Next.js',
       '|',
-      '@tanstack/react-query',
+      'Tanstack/react-query',
       '|',
       'Zustand',
       '|',
@@ -145,7 +149,7 @@ export const projectsData = [
       '|',
       'TailwindCSS',
       '|',
-      '@tanstack/react-query',
+      'Tanstack/react-query',
       '|',
       'ThreeJS',
       '|',
